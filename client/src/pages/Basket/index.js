@@ -36,7 +36,7 @@ function Basket() {
       address,
       items: JSON.stringify(itemIds)
     }
-    // console.log(itemIds)
+
     console.log(itemIds)
 
      await postOrder(input)
