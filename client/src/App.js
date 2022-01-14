@@ -18,6 +18,7 @@ import Signin from "./pages/Auth/Signin"
 import Signup from "./pages/Auth/Signup"
 import Profile from "./pages/Profile"
 import Basket from "./pages/Basket"
+import Admin from "./pages/Admin"
 import Error404 from "./pages/Error404"
 
  function App() {
@@ -34,6 +35,7 @@ import Error404 from "./pages/Error404"
         <Route path="/signup" component={Signup}/>
         <Route path="/basket" component={Basket}/>
         <ProtectedRoute path="/profile" component={Profile}/>
+        <ProtectedRoute path="/admin" component={Admin} admin={true}/>
         <Route path="*" component={Error404}/>
       </Switch>
       </div>
