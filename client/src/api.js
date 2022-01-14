@@ -22,24 +22,14 @@ axios.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-// ***********************************
-// '[failed to construct 'url' invalid]' => url hatasi cozumu
-// url hatasindan yola cikarak once buraya log attim.b fetchProductList geliyor.
-// Acaba url dorgru diye de log attim ama URL undefined geldi, .env dosyasina baktim dogru gorunuyor 
-// ama surekli undefined geliyor. Dedim ki bu .env dosyasi nasil kullanilir.
-// yani global bir dosyaya statik degiskenlerimizi atip (api'larimiz gibi) projenin herhangi bir yerinde kullanalim
-// .env dosyasinin root yani kok dizinde olmadigini farkettim.
-//  dosyayi src => client a tasidim. dosyalarda degisiklik yaptigim icin node vs herseyi kapatip yeniden compile ettim
-// boylelikle sorun cozulmus oldu. ~mi <3 sen benim kahramanimsiiinnn :* "6.1.22 07.50"
-// ************************************
+
+
 export const fetchProductList = async ({ pageParam = 1 }) => {
-//  console.log("fetchProductList...");
-//  console.log('process.env.REACT_APP_BASE_ENDPOINT', process.env.REACT_APP_BASE_ENDPOINT)
+
 
   const { data } = await axios.get(
     `${process.env.REACT_APP_BASE_ENDPOINT}/product?page=${pageParam}`
   );
-//  console.log("datafetchlist", data);
   return data;
 };
 
