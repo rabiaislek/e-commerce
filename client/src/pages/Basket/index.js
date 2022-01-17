@@ -20,6 +20,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useBasket } from "../../contexts/BasketContext";
+import { postOrder } from "../../api";
 
 function Basket() {
   const [address, setAddress] = useState("")
@@ -91,7 +92,6 @@ return (
 
           <Modal
         initialFocusRef={initialRef}
-        finalFocusRef={finalRef}
         isOpen={isOpen}
         onClose={onClose}
       >

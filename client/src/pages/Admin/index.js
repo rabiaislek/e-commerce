@@ -5,9 +5,9 @@ import "./styles.css"
 import {Box} from "@chakra-ui/react"
 import { Link, Switch, Route, useRouteMatch} from "react-router-dom"
 
-import {Home} from "./Home"
-import {Orders} from "./Orders"
-import {Products} from "./Products"
+import Home from "./Home"
+import Orders from "./Orders"
+import Products from "./Products"
 
 function Admin() {
    const {path, url} = useRouteMatch();
